@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Game1</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="Game1.css">
+</head>
+
+<body>
+    <div class="body_container container">
+        <div class="header_container">
+            <p id="game_name">DRAG COIN GAME</p>
+            <!--<p>COIN GAME</p>-->
+        </div>
+        <div class="game_container">
+            <div class="game_container_justified">
+                <div class="game_content_holder">
+                    <div class="home_round_timer_container">
+                        <div class="timer_container">
+                            <p id="timer_text">TIME LEFT : <span id="time" onclick="getRandomNumber()">10</span></p>
+                        </div>
+                        <div class="question_container">
+                            <p class="question_text">Target <span class="glyphicon glyphicon-usd currency_symbol"></span><span id="question" onclick="questionGenerator()">25</span></p>
+                        </div>
+                        <div class="miss_container">
+                        	<div class="miss_marker_container"><img src="wrongblack.png" class="miss_image"></div>
+                        	<div class="miss_marker_container"><img src="wrong.jpg" class="miss_image"></div>
+                        	<div class="miss_marker_container"><img src="wrong.jpg" class="miss_image"></div>
+                        </div>
+                    </div>
+
+                    <div class="prev_area">
+                    </div>
+                    <div class="drag_area" ondragover="allowDrop(event)" ondrop="drop(event)">
+                    	<div class="answer_row answer_row_one">
+                    		<div class="answer_col answer_col_left" id="option_1">
+                    		</div>
+                    		<div class="answer_col answer_col_right" id="option_2">
+                    		</div>
+                    	</div>
+
+                    	<div class="answer_row answer_row_two">
+                    		<div class="answer_col answer_col_left" id="option_3">
+                    		</div>
+                    		<div class="answer_col answer_col_right" id="option_2">
+                    		</div>
+                    	</div>
+                    </div>
+                    <div class="next_area">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="game_footer">
+        	<div class="coin_image_container_holder">
+        		<div class="coin_image_holder" id="twentyfivecent_image_div"><img src="twentyfivecent.jpg" id="twentyfivecent_image" draggable="true" ondragstart="drag(event)"></div>
+        		<div class="coin_image_holder" id="tencent_image_div"><img src="tencent.jpg" id="tencent_image" draggable="true" ondragstart="drag(event)"></div>
+        		<div class="coin_image_holder" id="fivecent_image_div"><img src="fivecent.jpg" id="fivecent_image" draggable="true" ondragstart="drag(event)"></div>
+        		<div class="coin_image_holder" id="onecent_image_div"><img src="onecent.jpg"  id="onecent_image" draggable="true" ondragstart="drag(event)"></div>
+        	</div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+    	function drag(event)
+    	{
+    		event.dataTransfer.setData("text",event.target.id);
+    	}
+
+    	function allowDrop(event)
+    	{
+    		event.preventDefault();
+    	}
+
+    	function drop(event)
+    	{
+    		event.preventDefault();
+    		var data = event.dataTransfer.getData("text");
+    		alert(data);
+    		event.target.appendChild(document.getElementById(data));
+    		var x ;
+    		var img ;
+    		if(data=="twentyfivecent_image")
+    		{
+    			x = document.getElementById('twentyfivecent_image_div');
+    			img = document.createElement("img");
+    			img.src = "twentyfivecent.jpg";
+    			img.id = "twentyfivecent_image";
+    		}
+    		else if(data=="tencent_image")
+    		{
+    			x = document.getElementById('tencent_image_div');
+    			img = document.createElement("img");
+    			img.src = "tencent.jpg";
+    			img.id = "tencent_image";
+    		}
+    		else if(data=="fivecent_image")
+    		{
+    			x = document.getElementById('fivecent_image_div');
+    			img = document.createElement("img");
+    			img.src = "fivecent.jpg";
+    			img.id = "fivecent_image";
+    		}
+    		else
+    		{
+    			x = document.getElementById('onecent_image_div');
+    			img = document.createElement("img");
+    			img.src = "onecent.jpg";
+    			img.id = "onecent_image";
+    		}
+    		img.draggable = "true";
+    		//img.ondragstart = drag;
+
+    		x.appendChild(img);
+    	}
+    </script>
+</body>
+
+</html>

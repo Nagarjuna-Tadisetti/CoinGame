@@ -1,0 +1,233 @@
+body, html{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.body_container{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	background-color: Gray;
+	text-align: justify;
+}
+
+.header_container{
+	width: 100%;
+	height: 10%;
+	margin: 0;
+	padding: 0;
+	background-color: DarkSlateGray;
+}
+
+.game_container{
+	width: 100%;
+	height: 65%;
+	background-color: rgb(255, 255, 204);
+}
+
+.game_container_justified{
+	width: 70%;
+	height: 100%;
+	margin: auto;
+	/*background-color: Gray;*/
+}
+
+.game_footer{
+	width: 100%;
+	height: 25%;
+	background-color: white;
+}
+
+.game_content_holder{
+	width: 80%;
+	height: 100%;
+	margin: auto;
+	background-color: Red;
+}
+
+.home_round_timer_container{
+	width: 100%;
+	height: 8%;
+	background-color: white;
+	margin: auto;
+}
+
+.timer_container{
+	width: 25%;
+	height: 100%;
+	margin: auto;
+	float: left;
+	background-color: Maroon;
+}
+
+.question_container{
+	width: 50%;
+	height: 100%;
+	margin: auto;
+	float: left;
+	background-color: Blue;
+}
+
+.miss_container{
+	width: 25%;
+	height: 100%;
+	margin: auto;
+	float: left;
+	background-color: Gray;
+}
+
+.miss_marker{
+	width: 33%;
+	height: 100%;
+	float: left;
+}
+
+.miss_image{
+	width: 70%;
+	height: 70%;
+	margin: 5%;
+}
+
+.miss_marker_container{
+	width: 33%;
+	height:100%;
+	float: left;
+	/*border: 1px solid black;*/
+	background-color: white;
+	text-align: center;
+}
+
+p#timer_text{
+	text-align: center;
+	font-weight: bold;
+	font-family: "Times New Roman", Georgia, Arial, Verdana, Courier New, Lucida Console;
+	text-decoration: none;
+	color: white;
+	font-size: 1em;
+	vertical-align: middle;
+	margin: 0px;
+}
+
+span#time{
+	font-size: 3em;
+	vertical-align: middle;
+}
+
+p.question_text{
+	text-align: center;
+	font-weight: bold;
+	font-family: "Times New Roman", Georgia, Arial, Verdana, Courier New, Lucida Console;
+	text-decoration: none;
+	color: white;
+	font-size: 1.75em;
+	vertical-align: middle;
+	margin: 0px;
+	line-height: 2em;
+}
+
+.prev_area{
+	height: 92%;
+	width: 15%;
+	background-color: Gray;
+	float: left;
+}
+
+.drag_area{
+	height: 92%;
+	width: 70%;
+	background-color: White;
+	float: left;
+	border: 1px solid Black;
+}
+
+.next_area{
+	height: 92%;
+	width: 15%;
+	background-color: Gray;
+	float: left;
+}
+
+.coin_image_container_holder{
+	width: 75%;
+	height: 100%;
+	background-color: white;
+	margin-left: 15%;
+}
+
+.coin_image_holder{
+	width: 25%;
+	height: 100%;
+	float: left;
+	/*border: 1px solid Red;*/
+}
+
+img#twentyfivecent_image{
+	width: 90%;
+	height: 90%;
+	margin-top: 5%;
+	margin-left: 5%;
+}
+
+img#tencent_image{
+	width: 70%;
+	height: 70%;
+	margin-top: 15%;
+	margin-left: 15%;
+}
+
+img#fivecent_image{
+	width: 50%;
+	height: 50%;
+	margin-top: 25%;
+	margin-left: 25%;
+}
+
+img#onecent_image{
+	width: 35%;
+	height: 35%;
+	margin-top: 35%;
+	margin-left: 35%;
+}
+
+.answer_row{
+	clear: both;
+	width: 100%;
+	height: 50%;
+	/*border: 1px solid white;*/
+}
+
+.answer_row::after{
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.answer_col{
+	float: left;
+	width: 50%;
+	height: 100%;
+	/*border: 1px solid black;*/
+}
+
+p{
+	margin: 0;
+	padding: 0;
+}
+p#game_name{
+	text-align: center;
+	font-weight: bold;
+	font-family: "Times New Roman", Georgia, Arial, Verdana, Courier New, Lucida Console;
+	text-decoration: none;
+	color: white;
+	font-size: 3em;
+	vertical-align: middle;
+	margin: 0px;
+	line-height: 2em;
+}
